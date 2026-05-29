@@ -1,2 +1,6 @@
 # HockeyNow
-A small side project I have made. This is a MAC project, and utilises the menu bar. Please note this is still in testing, and as of this upload, it has been only tested on the M1 Pro. HockeyNow provides the latest NHL scores (we are not affiliated) in a clean layout. There may be a few bugs; please be understanding that this is very new. Thank 
+
+A lightweight, zero-interaction macOS background utility that displays live hockey scores directly in your menu bar and anchors live tracking to the hardware screen notch.
+
+## Disclaimer & Affiliation Notice
+> **IMPORTANT:** This is an unofficial, fan-developed open-source application built strictly for personal and educational use. This utility is completely independent and is **not** affiliated with, endorsed by, authorized by, or in any way officially associated with any professional sports leagues, media networks, or official data providers. All product names, logos, and brands are property of their respective owners.
