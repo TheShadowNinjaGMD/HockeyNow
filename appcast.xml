@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>HockeyNow Updates</title>
+    <link>https://yourdomain.com/appcast.xml</link>
+    <description>Most recent updates for HockeyNow.</description>
+    <language>en</language>
+
+    <item>
+      <title>HockeyNow v2.1.0-alpha.1</title>
+      <pubDate>Fri, 14 Aug 2026 12:00:00 +0000</pubDate>
+      <sparkle:version>1</sparkle:version>
+      <sparkle:shortVersionString>2.1.0-alpha.1</sparkle:shortVersionString>
+      <enclosure 
+        url="https://yourdomain.com/hockeynow%20v2.1.0-alpha.1.zip" 
+        length="12345678" 
+        type="application/octet-stream" 
+        sparkle:edSignature="YOUR_GENERATED_SIGNATURE_HERE" />
+    </item>
+
+  </channel>
+</rss>
