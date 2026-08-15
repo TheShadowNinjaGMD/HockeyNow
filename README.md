@@ -2,6 +2,8 @@
 
 A lightweight, zero-interaction macOS background utility that displays live hockey scores directly in your menu bar and anchors live tracking to the hardware screen notch.
 
+Check out our new website: https://avdg-apps.github.io/HockeyNow/
+
 NOTE: Requires an internet connection to work.
 
 ## Disclaimer & Affiliation Notice
