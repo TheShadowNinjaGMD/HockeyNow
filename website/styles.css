@@ -1,8 +1,8 @@
 :root {
   --bg-color: #0d1117;
   --card-bg: #161b22;
-  --accent-color: #38bdf8;
-  --accent-hover: #0284c7;
+  --accent-color: #ffbf00;     
+  --accent-hover: #d9a000;     
   --text-main: #f3f4f6;
   --text-muted: #9ca3af;
   --border-color: #30363d;
@@ -30,12 +30,12 @@ nav {
   font-weight: 800;
   color: #fff;
   text-decoration: none;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s ease;
 }
 
 .logo:hover {
   transform: scale(1.05);
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 .logo span {
@@ -68,8 +68,9 @@ nav {
 
 .btn-github:hover {
   background-color: var(--border-color);
+  border-color: var(--accent-color);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .btn-contact {
@@ -88,12 +89,11 @@ nav {
 
 .btn-download:hover {
   background-color: var(--accent-hover);
-  color: #fff;
+  color: #000;
   transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.4);
+  box-shadow: 0 4px 14px rgba(255, 191, 0, 0.35);
 }
 
-/* Hero Section */
 .hero {
   text-align: center;
   padding: 5rem 1rem 3rem;
@@ -103,14 +103,20 @@ nav {
 
 .hero-badge {
   display: inline-block;
-  background: rgba(56, 189, 248, 0.1);
+  background: rgba(255, 191, 0, 0.1);
   color: var(--accent-color);
   padding: 0.35rem 0.8rem;
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
-  border: 1px solid rgba(56, 189, 248, 0.2);
+  border: 1px solid rgba(255, 191, 0, 0.25);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.hero-badge:hover {
+  transform: scale(1.04);
+  background: rgba(255, 191, 0, 0.18);
 }
 
 .hero h1 {
@@ -138,12 +144,11 @@ nav {
 
 .btn-primary:hover {
   background-color: var(--accent-hover);
-  color: #fff;
+  color: #000;
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.4);
+  box-shadow: 0 8px 24px rgba(255, 191, 0, 0.4);
 }
 
-/* Preview Window Hover Glow */
 .preview-container {
   display: flex;
   justify-content: center;
@@ -157,12 +162,13 @@ nav {
   border: 1px solid var(--border-color);
   border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hover-glow:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.25);
+  border-color: var(--accent-color);
+  box-shadow: 0 12px 30px rgba(255, 191, 0, 0.2);
 }
 
 .window-header {
@@ -187,7 +193,6 @@ nav {
   display: block;
 }
 
-/* Features Section & Lift Effect */
 .features {
   max-width: 1000px;
   margin: 5rem auto;
@@ -230,9 +235,13 @@ nav {
 .card-icon {
   font-size: 2rem;
   margin-bottom: 1rem;
+  transition: transform 0.25s ease;
 }
 
-/* Footer */
+.hover-lift:hover .card-icon {
+  transform: scale(1.15) rotate(5deg);
+}
+
 footer {
   text-align: center;
   padding: 3rem 1rem;
@@ -244,10 +253,11 @@ footer {
 .footer-email {
   color: var(--accent-color);
   text-decoration: none;
-  transition: opacity 0.2s ease;
+  font-weight: 600;
+  transition: opacity 0.2s ease, text-decoration 0.2s ease;
 }
 
 .footer-email:hover {
   text-decoration: underline;
-  opacity: 0.8;
+  opacity: 0.85;
 }
