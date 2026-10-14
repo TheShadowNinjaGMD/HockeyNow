@@ -4,7 +4,8 @@ on:
   workflow_dispatch: # Gives you the manual button to run it
 
 permissions:
-  contents: write # Crucial: Allows the script to create releases and upload files
+  contents: write    # Allows the script to create releases and upload files
+  workflows: write   # Allows pushing tags that contain workflow files
 
 jobs:
   mirror:
@@ -35,7 +36,7 @@ jobs:
             exit 0
           fi
           
-          # 3. FIXED REMOTE PATH: Pull the parent tags so Git knows the commit point (Fixed the URL)
+          # 3. Pull the parent tags and push them to your fork
           git remote add upstream https://github.com/avdg-apps/HockeyNow.git
           git fetch --tags upstream
           git push origin --tags || echo "Tags might already exist on remote"
@@ -49,15 +50,13 @@ jobs:
             fi
           done
           
-          # 5. Create the corresponding release on your fork and upload the assets
-          echo "Creating matching release $TAG_NAME on your fork..."
-          
-          # Handle cases where release notes might be empty/null to prevent gh CLI errors
+          # 5. Handle empty release notes if any
           if [ "$RELEASE_BODY" = "null" ] || [ -z "$RELEASE_BODY" ]; then
             RELEASE_BODY="Mirrored release from upstream $TAG_NAME"
           fi
           
-          # Check if assets exist to avoid passing an empty wildcard pattern if download failed
+          # 6. Create the corresponding release on your fork and upload assets safely
+          echo "Creating matching release $TAG_NAME on your fork..."
           if compgen -G "assets_dir/*" > /dev/null; then
             gh release create "$TAG_NAME" \
               --title "$RELEASE_TITLE" \
