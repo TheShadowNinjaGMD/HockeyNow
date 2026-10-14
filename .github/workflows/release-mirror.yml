@@ -5,7 +5,6 @@ on:
 
 permissions:
   contents: write    # Allows the script to create releases and upload files
-  workflows: write   # Allows pushing tags that contain workflow files
 
 jobs:
   mirror:
