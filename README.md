@@ -21,6 +21,14 @@
 > [!NOTE]
 > **Internet Connection Required:** This utility requires an active internet connection to fetch real-time game data and live scores.
 
+
+## Installation
+1. Open the .dmg and drag to 'Applications'
+2. If a privacy error occurs, follow these steps:
+3. Go to Settings > Privacy and scroll down
+4. Click 'Allow anyway'
+5. Open the app
+
 ##  Disclaimer & Affiliation Notice
 
 > [!IMPORTANT]
