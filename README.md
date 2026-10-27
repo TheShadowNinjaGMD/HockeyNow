@@ -38,3 +38,6 @@ This utility is completely independent and is **not** affiliated with, endorsed 
 
 ###  Privacy Policy
 We value your privacy. This application **does not collect, track, or transmit any user data**. The app runs entirely locally on your computer.
+
+## Issues?
+Contact me at avdgapps@gmail.com
