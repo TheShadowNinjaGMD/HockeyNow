@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://puck-live-link.base44.app//"><strong>Visit Official Website »</strong></a>
+  <a href="https://avdg-apps.github.io/HockeyNow/"><strong>Visit Official Website »</strong></a>
 </p>
 
 [Project Demo](app-demo.mp4)
